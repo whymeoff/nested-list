@@ -117,10 +117,12 @@ function remove() { // to remove element from list
 
 function sublistAdd() { // to add sublist to element
     event.target.parentElement.children[5].classList.remove('disable')
+    event.target.parentElement.children[4].classList.add('disable')
     event.target.parentElement.innerHTML += `<ul>${inputTags}</ul>`
 }
 
 function removeSublist() { // to remove sublist
     event.target.parentElement.lastChild.remove()
     event.target.classList.add('disable')
+    event.target.parentElement.children[4].classList.remove('disable')
 }
